@@ -5,48 +5,14 @@ $(document).ready(function() {
 	initializePage();
 })
 
-
-
-
-function projectClick(e) { 
-    // prevent the page from reloading      
-    e.preventDefault();
-    // In an event handler, $(this) refers to      
-    // the object that triggered the event   
-
-    $('#friendsname').click(function(){
-   		$(this).text("Test");
-	});   
-
-    //$(this).text(anagrammedName(name));
-    
-   // $("#friendsname").click(function(e) {
-	//	$(this).text(anagrammedName(name));
-}
-
-
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
 
-/*
-	$('#friendsname').click(function(e) {
-            $(this).text(anagrammedName(name));
-            });
-            */
-
-/*
-	$("#friendsname").click(function () {
-		$(#friendsname).text(anagrammedName(name));
-	})
-*/
-
-	$("a.thumbnail").click(projectClick);
-	
+	$("a.friendsname").click(nameClicked);
 }
-
 
 
 function anagrammedName(name) {
@@ -82,3 +48,9 @@ function anagrammedName(name) {
 	}
 }
 
+function nameClicked(e) {
+	e.preventDefault();
+
+	var getname = $(this).text();
+	$(this).text(anagrammedName(getname));
+}
