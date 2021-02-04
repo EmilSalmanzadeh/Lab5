@@ -11,7 +11,9 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 
+	//class
 	$("a.friendsname").click(nameClicked);
+	//id
 	//$("#friendsname").click(nameClicked);
 }
 
