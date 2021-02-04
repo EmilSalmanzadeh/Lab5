@@ -12,6 +12,8 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 
+// require()
+
 var app = express();
 
 // all environments
