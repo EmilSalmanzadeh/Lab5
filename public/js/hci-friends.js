@@ -12,6 +12,7 @@ function initializePage() {
 	console.log("Javascript connected!");
 
 	$("a.friendsname").click(nameClicked);
+	//$("#friendsname").click(nameClicked);
 }
 
 
